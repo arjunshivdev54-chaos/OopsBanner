@@ -1,6 +1,15 @@
-public class OopsBanner{
-    public static void main(String[] args){
-        // UC1:
-        System.out.println("OOPS");
-    }
+public class UC3 {
+    
+}
+public static void main(String[] args) {
+		
+        System.out.println("   ***        ***     ******       *****     ");
+        System.out.println("  **  **     ** **    **    **   **          ");
+        System.out.println(" **    **   **   **   **    **  **           ");
+        System.out.println(" **    **   **   **   **    **   **          ");
+        System.out.println(" **    **   **   **   ******        ****     ");
+        System.out.println(" **    **   **   **   **                **  ");
+        System.out.println(" **    **   **   **   **                 **   ");
+        System.out.println("  **  **     ** **    **                **    ");
+        System.out.println("   ***        ***     **           *****    ");
 }
