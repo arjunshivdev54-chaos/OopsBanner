@@ -60,7 +60,7 @@ public class OopsBanner {
         // Store all characters in array
         CharacterPatternMap[] banner = {O, O, P, S};
 
-        // Print Horizontally using StringBuilder
+        // Print Horizontally using StringBuilder.
         for (int i = 0; i < height; i++) {
 
             StringBuilder line = new StringBuilder();
