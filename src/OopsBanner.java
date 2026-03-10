@@ -1,75 +1,62 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class OopsBanner {
 
-    // Static Inner Class to store Character and its Pattern
-    static class CharacterPatternMap {
-        private char character;
-        private String[] pattern;
+    // Function to render banner
+    public static void renderBanner(String word, Map<Character, String[]> patterns) {
 
-        // Constructor
-        public CharacterPatternMap(char character, String[] pattern) {
-            this.character = character;
-            this.pattern = pattern;
-        }
+        int height = 7;
 
-        // Getter for character
-        public char getCharacter() {
-            return character;
-        }
+        for (int i = 0; i < height; i++) {
 
-        // Getter for pattern
-        public String[] getPattern() {
-            return pattern;
+            for (char c : word.toCharArray()) {
+
+                String[] pattern = patterns.get(c);
+
+                if (pattern != null) {
+                    System.out.print(pattern[i] + "   ");
+                }
+            }
+
+            System.out.println();
         }
     }
 
     public static void main(String[] args) {
 
-        int height = 7;
+        Map<Character, String[]> patterns = new HashMap<>();
 
-        // Create Pattern Objects
-        CharacterPatternMap O = new CharacterPatternMap('O', new String[]{
-                "*******",
+        patterns.put('O', new String[]{
+                " ***** ",
                 "*     *",
                 "*     *",
                 "*     *",
                 "*     *",
                 "*     *",
-                "*******"
+                " ***** "
         });
 
-        CharacterPatternMap P = new CharacterPatternMap('P', new String[]{
-                "****** ",
-                "*     *",
-                "*     *",
-                "****** ",
-                "*      ",
-                "*      ",
-                "*      "
+        patterns.put('P', new String[]{
+                "***** ",
+                "*    *",
+                "*    *",
+                "***** ",
+                "*     ",
+                "*     ",
+                "*     "
         });
 
-        CharacterPatternMap S = new CharacterPatternMap('S', new String[]{
-                "*******",
-                "*      ",
-                "*      ",
-                "*******",
-                "      *",
-                "      *",
-                "*******"
+        patterns.put('S', new String[]{
+                " *****",
+                "*     ",
+                "*     ",
+                " **** ",
+                "     *",
+                "     *",
+                "***** "
         });
 
-        // Store all characters in array
-        CharacterPatternMap[] banner = {O, O, P, S};
-
-        // Print Horizontally using StringBuilder.
-        for (int i = 0; i < height; i++) {
-
-            StringBuilder line = new StringBuilder();
-
-            for (CharacterPatternMap cp : banner) {
-                line.append(cp.getPattern()[i]).append("  ");
-            }
-
-            System.out.println(line);
-        }
+        renderBanner("OOPS", patterns);
     }
 }
