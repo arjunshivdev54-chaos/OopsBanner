@@ -1,15 +1,22 @@
-public class UC4 {
-    
-}
-public static void main(String[] args) {
-		
-        System.out.println("   ***        ***     ******       *****     ");
-        System.out.println("  **  **     ** **    **    **   **          ");
-        System.out.println(" **    **   **   **   **    **  **           ");
-        System.out.println(" **    **   **   **   **    **   **          ");
-        System.out.println(" **    **   **   **   ******        ****     ");
-        System.out.println(" **    **   **   **   **                **  ");
-        System.out.println(" **    **   **   **   **                 **   ");
-        System.out.println("  **  **     ** **    **                **    ");
-        System.out.println("   ***        ***     **           *****    ");
+public class OopsBanner {
+
+    public static void main(String[] args) {
+
+        // Array declaration + initialization using String.join()
+        String[] banner = {
+            String.join("", " *****    *****    *****    ***** "),
+            String.join("", "*     *   *    *   *    *   *     "),
+            String.join("", "*     *   *    *   *    *   *     "),
+            String.join("", "*     *   *****    *****     ***  "),
+            String.join("", "*     *   *        *            * "),
+            String.join("", "*     *   *        *            * "),
+            String.join("", " *****    *        *        ****  ")
+        };
+
+        // Loop to print banner
+        for (String line : banner) {
+            System.out.println(line);
+        }
+
+    }
 }
