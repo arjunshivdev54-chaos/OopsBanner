@@ -1,22 +1,49 @@
 public class OopsBanner {
 
+    static String[] createO() {
+        return new String[]{
+            " ***** ",
+            "*     *",
+            "*     *",
+            "*     *",
+            "*     *",
+            "*     *",
+            " ***** "
+        };
+    }
+
+    static String[] createP() {
+        return new String[]{
+            "***** ",
+            "*    *",
+            "*    *",
+            "***** ",
+            "*     ",
+            "*     ",
+            "*     "
+        };
+    }
+
+    static String[] createS() {
+        return new String[]{
+            " *****",
+            "*     ",
+            "*     ",
+            " **** ",
+            "     *",
+            "     *",
+            "***** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        // Array declaration + initialization using String.join()
-        String[] banner = {
-            String.join("", " *****    *****    *****    ***** "),
-            String.join("", "*     *   *    *   *    *   *     "),
-            String.join("", "*     *   *    *   *    *   *     "),
-            String.join("", "*     *   *****    *****     ***  "),
-            String.join("", "*     *   *        *            * "),
-            String.join("", "*     *   *        *            * "),
-            String.join("", " *****    *        *        ****  ")
-        };
+        String[] O = createO();
+        String[] P = createP();
+        String[] S = createS();
 
-        // Loop to print banner
-        for (String line : banner) {
-            System.out.println(line);
+        for (int i = 0; i < 7; i++) {
+            System.out.println(O[i] + "   " + O[i] + "   " + P[i] + "   " + S[i]);
         }
-
     }
 }
